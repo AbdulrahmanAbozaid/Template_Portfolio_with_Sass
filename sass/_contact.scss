@@ -1,0 +1,36 @@
+@use "./config" as *;
+
+.contact {
+  position: relative;
+  height: 100vh;
+  padding-top: 40vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(
+      rgba($primary-color, 0.7),
+      rgba($primary-color, 0.7)
+    ),
+    url("../imgs/model-1.jpg") {
+    position: center top;
+    size: cover;
+  }
+
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .social-icons {
+    position: initial;
+    margin-top: 2rem;
+  }
+}

@@ -1,0 +1,8 @@
+@use "./config" as *;
+
+header {
+  position: fixed;
+  z-index: 2;
+  padding: 2rem;
+  width: 100%;
+}

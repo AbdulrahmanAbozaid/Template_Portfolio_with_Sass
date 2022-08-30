@@ -1,0 +1,41 @@
+@use "./config" as *;
+@use "./resets";
+@use "./header";
+@use "./home";
+@use "./menu";
+@use "./about";
+@use "./projects";
+@use "./contact";
+@use "./responsive" as *;
+
+.text-secondary {
+  color: $secondary-color;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+
+  .social-icons {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    a {
+      padding: 0.4rem;
+      @include transit();
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
+footer {
+  font-size: 1rem;
+  position: fixed;
+  bottom: 0.4rem;
+  right: 1rem;
+  text-align: right;
+  padding: 1rem;
+  color: get-color($primary-color);
+}

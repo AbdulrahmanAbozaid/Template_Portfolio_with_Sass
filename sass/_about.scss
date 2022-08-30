@@ -1,0 +1,77 @@
+@use "./config" as *;
+
+.about {
+  padding-bottom: 2rem;
+
+  &__bio-image {
+    position: relative;
+    height: 50vh;
+    width: 100%;
+    background: url("../imgs/model-1.jpg") {
+      size: cover;
+      position: center top;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      width: 80%;
+      margin: auto;
+      text-align: center;
+      height: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex-flow: column;
+
+      .text-secondary {
+        padding-bottom: 1rem;
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(22, 8, 8, 0.612);
+    }
+    p {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .jobs {
+    width: 60vw;
+    margin: 2rem auto 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+
+    &__job {
+      background: lighten($color: $primary-color, $amount: 10%);
+      padding: 0.5rem;
+      border-bottom: 5px solid $secondary-color;
+
+      h2,
+      h3 {
+        margin: 0.5rem 0;
+      }
+
+      h6 {
+        margin: 0.3rem 0;
+      }
+    }
+  }
+
+  .social-icons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer {
+    writing-mode: vertical-lr;
+  }
+}
